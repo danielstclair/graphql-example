@@ -1,0 +1,29 @@
+{
+  "name": "graphql-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
+    "@babel/polyfill": "7.4.4",
+    "@babel/preset-env": "7.4.4",
+    "@babel/preset-flow": "7.0.0"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.4",
+    "apollo-server-express": "^2.9.4",
+    "dataloader": "^1.4.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-import": "^0.7.1",
+    "lodash.merge": "^4.6.2"
+  },
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --ignore 'dist/' --exec \"yarn run build && yarn run start\"",
+    "build": "rm -rf dist 2> /dev/null || true && mkdir dist && echo 'Compiling!' && babel --copy-files --quiet --out-dir dist src"
+  }
+}
