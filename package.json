@@ -22,8 +22,8 @@
     "lodash.merge": "^4.6.2"
   },
   "scripts": {
-    "start": "node ./dist/index.js",
-    "dev": "nodemon --ignore 'dist/' --exec \"yarn run build && yarn run start\"",
-    "build": "rm -rf dist 2> /dev/null || true && mkdir dist && echo 'Compiling!' && babel --copy-files --quiet --out-dir dist src"
+    "start:api": "node ./api/dist/index.js",
+    "api": "nodemon --ignore './api/dist/' --exec \"yarn run build && yarn run start:api\"",
+    "build": "rm -rf ./api/dist 2> /dev/null || true && mkdir -p ./api/dist && echo 'Compiling!' && babel --copy-files --quiet --out-dir ./api/dist ./api/src"
   }
 }
