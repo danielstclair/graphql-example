@@ -7,15 +7,15 @@ const depthLimit = require('graphql-depth-limit');
 const schema = importSchema(`${__dirname}/schema.graphql`);
 
 const users = [
-  { id: 1, name: 'St. Clair' },
-  { id: 2, name: 'Rico' },
-  { id: 3, name: 'Mateus' },
-  { id: 4, name: 'Franco' },
-  { id: 5, name: 'Daniela' },
-  { id: 6, name: 'Emmett' },
-  { id: 7, name: 'Dylan' },
-  { id: 8, name: 'Tom' },
-  { id: 9, name: 'Jacob' },
+  { id: 1, firstName: 'Daniel', lastName: 'St. Clair' },
+  { id: 2, firstName: 'Rico', lastName: 'Callirgos' },
+  { id: 3, firstName: 'Mateus', lastName: 'Gomes' },
+  { id: 4, firstName: 'Daniel', lastName: 'Franco' },
+  { id: 5, firstName: 'Daniela', lastName: 'Barrientos' },
+  { id: 6, firstName: 'Emmett', lastName: 'Newton' },
+  { id: 7, firstName: 'Dylan', lastName: 'Ellison' },
+  { id: 8, firstName: 'Tom', lastName: 'Workman' },
+  { id: 9, firstName: 'Jacob', lastName: 'Bodkin' },
 ];
 
 const getUsers = () => users;
