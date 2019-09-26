@@ -8,6 +8,6 @@ type UserCardPropsType = {|
 
 export const UserCard = (props: UserCardPropsType) => (
   <p>
-    {props.firstName} {props.lastName}
+    {props.firstName} {props.lastName} {props.email} {props.hobbies}
   </p>
 );

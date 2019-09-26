@@ -2,7 +2,33 @@ type User {
   id: ID
   firstName: String
   lastName: String
+  email: String
+  hobbies: [String]
+  "this represents an array of todo items. It was called qwerty123456 because some other developer (Daniel) is dumb."
+  qwerty123456: [Todo]
+}
+type Todo {
+  id: ID
+  description: String
+  completed: Boolean
+  user: User
+}
+input TodoInput {
+  id: ID
+  description: String
+  completed: Boolean
+  userId: Int
+}
+type NewTodoType {
+  todo: Todo
+  success: Boolean
 }
 type Query {
-  getUsers: [User]
+  users: [User]
+  user(userId: Int!): User
+  todos: [Todo]
+}
+
+type Mutation {
+  addTodo(input: TodoInput): NewTodoType
 }

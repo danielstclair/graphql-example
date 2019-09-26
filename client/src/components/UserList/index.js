@@ -6,10 +6,12 @@ import { UserCard } from '../UserCard';
 
 const GET_USERS = gql`
   {
-    getUsers {
+    users {
       id
       firstName
       lastName
+      email
+      hobbies
     }
   }
 `;
@@ -21,7 +23,7 @@ export const UserList = () => {
     console.error(error);
     return <p>Error :(</p>;
   }
-  return data.getUsers.map(user => {
+  return data.users.map(user => {
     return <UserCard {...user} key={user.id} />;
   });
 };

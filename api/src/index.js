@@ -8,7 +8,7 @@ const app = express();
 const server = new ApolloServer(schema);
 const port = 5000;
 server.applyMiddleware({ app });
-app.use(cors())
+app.use(cors());
 
 app.listen({ port }, () =>
   console.log(`Server ready. go to localhost:${port}${server.graphqlPath}`)
