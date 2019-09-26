@@ -1,4 +1,7 @@
-# import * from 'user/user.graphql'
+type User {
+  id: ID
+  name: String
+}
 type Query {
   getUsers: [User]
 }
